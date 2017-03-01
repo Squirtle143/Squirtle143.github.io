@@ -1,67 +1,56 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-<head>
-
-  <link href="style.css" rel="stylesheet">
-
-  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
-  <title>index</title>
+<<style>
+p0 {font-size: 4em; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; color: #ddcca3;}
+</style>
+<p0 id="p0">Муки ИРЫ</p0>
 
 
-</head>
+<script>
+function er1() {
+     document.getElementById('p0').innerHTML =" "; 
+var e =9;  
+var A=[];
+for (;e>=0;){
+l='i'+e;
+A[e]= document.getElementById(l).value;
+e--;}
+    for (var i = 0; i < 9; i++)
+     { for (var j = 0; j < 9-i; j++)
+        { if (A[j+1] < A[j])
+           { var t = A[j+1]; A[j+1] = A[j]; A[j] = t; }
+        }
+     }                     
+   document.getElementById('p0').innerHTML = document.getElementById('p0').innerHTML +" "+A[0]; 
+}
+ 
+
+</script>
 
 
-<body>
-
-<ul>
-
-  <li><a href="index.html">Home</a></li>
-
-  <li><a href="html.html">HTML</a></li>
-
-  <li>JAVASCRIPT
-    <ul>
-
-      <li> <a href="zad1.html">&#1047;&#1040;&#1044;&#1040;&#1063;&#1040;1 </a></li>
-
-      <li><a href="zad2.html">&#1047;&#1040;&#1044;&#1040;&#1063;&#1040;2</a></li>
-
-      <li><a href="zad3.html">&#1047;&#1040;&#1044;&#1040;&#1063;&#1040;3</a></li>
-
-    </ul>
-
-  </li>
-
-  <li><a href="css.html">CSS</a></li>
-
-</ul>
 
 
 <br>
-
-<script>
-'use strict';
-function factorial(n) {
-return n ? n * factorial(n - 1) : 1;
-}
-alert( factorial(5) ); // 120
-</script>
-<script>
-var i = 1; res = 1;
-while (i <= 5) {
-res = res * i;
-++i;
-alert (res)
-}
-</script>
- 
-  <head>
-    <meta charset="utf-8">
-    <title> БОЛЬ ИРЫ</title>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-<body>
-
+<input value="" id="i0" type="text">
+<br> 
+<input value="" id="i1" type="text">
+<br>
+<input value="" id="i2" type="text">
+<br>
+<input value="" id="i3" type="text">
+<br>
+<input value="" id="i4" type="text">
+<br>
+<input value="" id="i5" type="text">
+<br> 
+<input value="" id="i6" type="text">
+<br>
+<input value="" id="i7" type="text">
+<br>
+<input value="" id="i8" type="text">
+<br>
+<input value="" id="i9" type="text">
+<br>
+<br>
+<a href="#on" class="button15" onclick="er1()" >задача 1</a>
 <style>
 p0 {font-size: 4em; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; color: #ddcca3;}
 p1 {font-size: 4em; text-shadow: 4px 2px black; color: #ece2ca;}
@@ -95,78 +84,3 @@ a.button15:active {
 }
 </style>
 
-<p0 id="p0">Муки ИРЫ</p0>
- <script>
-function er5() {
-var fruits = ["Яблоко", "Апельсин", "Слива", "банан", "груша"];
-var e=4;
-for (;e>=0;){
-l='i'+e;
-fruits[e]= document.getElementById(l).value;
-e--;}
-e=4;
-document.getElementById('p0').innerHTML =""
-for (;e>=0;){
-document.getElementById('p0').innerHTML = document.getElementById('p0').innerHTML +" "+( fruits[e] ); 
-e--;}}v
-   
-</script>
-<br>
-<br>
-
-<a href="#on" class="button15" onclick="er5()" >Array</a>
-<br>
-<input value="" id="i0" type="text">
-<br> 
-<input value="" id="i1" type="text">
-<br>
-<input value="" id="i2" type="text">
-<br>
-<input value="" id="i3" type="text">
-<br>
-<input value="" id="i4" type="text">
-<br>
-<script>
-function er1() {
-og = document.getElementById("quantity").value
-var i = 1;
-factorial = 1;
-while (i <= og) {
-factorial = factorial * i;
-++i;
-}
-document.getElementById('p1').innerHTML = ""
-document.getElementById('p1').innerHTML = document.getElementById('p1').innerHTML +"&#1060;&#1072;&#1082;&#1090;&#1086;&#1088;&#1080;&#1072;&#1083;" + " " + og + "=" + factorial;
-}
-</script>
-<script>
-function er2() {
-document.getElementById('p2').innerHTML = ""
-var i;
-var b;
-i = eval(document.getElementById("quantity1").value)
-b = eval(document.getElementById("quantity2").value)
-for (; i >=b; i--) 
-{
-  if (i % 2 == 0){
-document.getElementById('p2').innerHTML = document.getElementById('p2').innerHTML + " " + i ;
-};
-}
-}
-</script>
-<br>
-<p1 id="p1">1</p1>
-<br>
-<button onclick="er1()">факториал</button>
-<input value="" id="quantity" type="text">
-<br>
-<p2 id="p2">2</p2>
-<br>
-<button onclick="er2()">цикл, четные от большего к меньшему</button>
-<input value="" id="quantity1" type="text">
-<input value="" id="quantity2" type="text">
-</body>
-
-
-
-</html>
